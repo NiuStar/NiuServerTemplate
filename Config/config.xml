@@ -1,0 +1,29 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<config ver="1.0.0.0">
+  <logpara echo="日志参数配置">
+    <log_level dynamic="yes" echo="日志级别:0:TRACE;1:DEBUG;2:INFO;3:WARN;4:ERROR;5:FATAL;6:OFF">1</log_level>
+    <log_path dynamic="no" echo="日志文件路径">log</log_path>
+    <log_days dynamic="no" echo="日志保存天数">7</log_days>
+  </logpara>
+  <db_info echo="mysql数据库配置">
+    <db_server dynamic="no" echo="数据库地址">localhost</db_server>
+    <db_port dynamic="no" echo="数据库端口">3306</db_port>
+    <db_name dynamic="no" echo="数据库名称">test</db_name>
+    <db_user dynamic="no" echo="数据库用户名">root</db_user>
+    <db_password dynamic="no" echo="数据库密码">123456</db_password>
+    <db_charset dynamic="no" echo="数据库客户端字符集">utf8mb4</db_charset>
+  </db_info>
+  <manage echo="服务器参数配置">
+      <domain >https://cninct.com</domain>
+      <listen_port dynamic="no" echo="管理口监听地址和端口">30001</listen_port>
+      <tls dynamic="no" echo="是否使用HTTPS证书">false</tls>
+      <cert dynamic="no" echo="HTTPS证书的CERT文件">https.cert</cert>
+      <key dynamic="no" echo="是否使用HTTPS证书KEY文件">https.key</key>
+      <url_role dynamic="no" echo="使用何种路由规则，0是：https://cninct.com/pm?subject=User%26action=login，1是：https://cninct.com/pm/User/login">1</url_role>
+  </manage>
+  <file echo="配置信息">
+      <LocalPath dynamic="no" echo="工作文件保存路径">hkrc_dir</LocalPath>
+      <WebWorkDir dynamic="no" echo="WEB工作路径">html</WebWorkDir>
+      <NetworkPath dynamic="no" echo="文件下载服务器">http://192.168.1.133:30001/html</NetworkPath>
+  </file>
+</config>
